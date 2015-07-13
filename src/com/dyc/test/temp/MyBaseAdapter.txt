@@ -16,7 +16,7 @@ public abstract class MyBaseAdapter extends android.widget.BaseAdapter {
     private Context context;
     private List entitys;
     private LayoutInflater mInflater;
-    public void MyBaseAdapter(Context context,List<? extends Object> data) {
+    public  MyBaseAdapter(Context context,List<? extends Object> data) {
         mInflater = LayoutInflater.from(context);
         this.context = context;
         this.entitys = entitys;
