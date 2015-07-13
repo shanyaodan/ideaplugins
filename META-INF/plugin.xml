@@ -1,0 +1,58 @@
+<idea-plugin version="2">
+  <id>com.yourcompany.unique.plugin.id</id>
+  <name>testPlugin</name>
+  <version>1.0</version>
+  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+  <description><![CDATA[
+      android code gen.<br>
+      <em>gen android code auto</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+
+    ]]>
+  </change-notes>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="131"/>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+
+<!--  <actions>
+    <group id="MyPlugin.SampleMenu" text="_Sample Menu" description="Sample menu">
+      <add-to-group group-id="MainMenu" anchor="last"  />
+      <action id="Myplugin.Dialogs" class="com.dyc.test.Myaction2" text="Show _Dialog" description="A test menu item" />
+    </group>
+  </actions>-->
+
+  <actions>
+   <group id="MyPlugin.genActivity" text="_genActivity" description="genActivity">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="last"  />
+      <action id="Myplugin.genActivityAction" class="com.dyc.test.GenActivityAction" text="genActivity" description="genActivity with findViewbyIds" />
+    </group>
+    <group id="MyPlugin.genAdapter" text="_genAdapter" description="genAdapter">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="last"  />
+      <action id="Myplugin.genAdapterAction" class="com.dyc.test.GenAdapterAction" text="genAdapter" description="genAdapter" />
+    </group>
+
+    <group id="MyPlugin.genFragment" text="_genFragment" description="genFragment">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="last"  />
+      <action id="Myplugin.genFragmentAction" class="com.dyc.test.GenFragmentAction" text="genFragment" description="genFragment" />
+    </group>
+    <group id="MyPlugin.GenFindViewByids" text="_GenFindViewByids" description="GenFindViewByids">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="last"  />
+      <action id="Myplugin.genFindViewByidsAction" class="com.dyc.test.ShowIndosAction" text="showInDialog" description="showInDialog" />
+    </group>
+  </actions>
+
+</idea-plugin>
