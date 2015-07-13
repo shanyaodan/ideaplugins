@@ -14,10 +14,12 @@ public abstract class MyBaseAdapter extends android.widget.BaseAdapter {
 
 
     private Context context;
-    private List<? extends Object> entitys;
+    private List entitys;
     private LayoutInflater mInflater;
     public void MyBaseAdapter(Context context,List<? extends Object> data) {
         mInflater = LayoutInflater.from(context);
+        this.context = context;
+        this.entitys = entitys;
     }
 
     @Override
@@ -47,9 +49,10 @@ public abstract class MyBaseAdapter extends android.widget.BaseAdapter {
           for(int a=0;a<ids.length;a++) {
               vh.addView(convertView,ids[a]);
           }
-            initViews(ViewHolder vh);
+        } else {
+        vh = (ViewHolder)convertView.getTag();
         }
-
+         initViews(ViewHolder vh);
         return convertView;
     }
     public abstract int getLayoutId();
