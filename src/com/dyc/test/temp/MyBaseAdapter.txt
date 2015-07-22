@@ -57,7 +57,7 @@ public abstract class MyBaseAdapter extends android.widget.BaseAdapter {
     }
     public abstract int getLayoutId();
     public abstract int[]getConvertItemIds();
-    public abstract void initViews();
+    public abstract void initViews(ViewHolder vh);
   protected   class ViewHolder {
         SparseArray<View> viewArray = new SparseArray<View>();
         public void addView(View convertView, int id) {
